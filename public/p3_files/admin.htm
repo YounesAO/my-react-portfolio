@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel </title>
+        <link rel="icon" href="admin_data/My%20Website.png">
+    <script src="admin_data/jquery-3.6.0.js"></script>
+
+    <script src="admin_data/chart.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+<link href="admin_data/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="admin_data/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="admin_data/admin.css">
+    <link rel="stylesheet" type="text/css" href="admin_data/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="admin_data/jquery.dataTables.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-light">
+  <div class="container-fluid ">
+    <a class="btn navbar-brand" href="https://os-centa.000webhostapp.com/dashboard.php">
+    
+      <img data-bs-toggle="tooltip" title="" src="admin_data/My%20Website.png" alt="Avatar Logo" style="width:40px;" class=" bg-dark rounded-pill" data-bs-original-title=")   Go back !" aria-label=")   Go back !"> 
+      
+    </a>
+    <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item p-1">
+      <a class="nav-link p-1 active" data-bs-toggle="pill" href="#dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item p-1">
+      <a class="nav-link p-1" data-bs-toggle="pill" href="#Employes">Employes</a>
+    </li>
+    <li class="nav-item p-1">
+      <a class="nav-link p-1" data-bs-toggle="pill" href="#Products">Products</a>
+    </li>
+    <li class="nav-item p-1">
+      <a class="nav-link p-1" data-bs-toggle="pill" href="#Operations">Operations</a>
+    </li>
+  </ul>
+    <span class=" bg-primary p-1 m-1 text-light border-5">02/21/2023</span>
+  </div>
+</nav>    
+<div class=" d-flex divnav">
+  <!-- Nav pills -->
+  
+  <!-- Tab panes -->
+  <div class="container-fluid tab-content">
+    <div id="dashboard" class="tab-pane active">
+    <h6 class="c-white  bd-highligh m-1 ">Dashboard over view </h6>
+
+      <div class=" d-flex flex-wrap justify-content-center">
+        
+        <div class="  container-fluid m-0 p-0 col-sm-6 flex-colums flex-wrap justify-content-center">
+            
+            <h3 class="text-light  text-center  shadow-lg bg-1 p-3 m-1 ">Today's Profit</h3><h1 class="text-center p-3 m-2 shadow bg-success text-white rounded text-warning m-13">
+
+                0.00            dh</h1>
+            <div class="container-fluid bg-light chart shadow">
+              <canvas id="myChart" style="display: block; box-sizing: border-box; height: 293px; width: 586px;" width="586" height="293"></canvas>
+              </div>
+            
+        </div>
+        <div class=" col-sm-6">
+                     <h3 class="text-light  text-center  shadow-lg bg-2 p-3 m-1 ">Top Employee</h3><div class="text-center p-3 m-2 shadow bg-light text-white rounded text-warning m-13"><h3 class="text-center p-1 m-1 shadow bg-4 text-white rounded ">
+            YOUNES  AITOUAHDA            </h3>
+            <img class="m-3 p-1 col-4" src="admin_data/avatar.png" alt="Card image" width="200px">
+            <h3 class="text-light  text-center  shadow-lg bg-3 p-2 m-1" style="font-weight:lighter; ">made over <span class="text-danger " style="font-weight: bold ;">51257.5dh</span> in one OP </h3>
+        </div>
+            
+
+            
+        </div>
+
+      </div>
+      <div class="d-flex flex-wrap justify-content-center col-sm-12">
+          <div class="container-fluid m-0 p-0  col-sm-6  shadow-lg ">
+                        <h3 class="text-light  text-center  shadow-lg bg-2 p-3 m-1 ">Top Product</h3>
+             <div class="text-center container-fluid m-0 p-0  shadow bg-light text-white rounded text-warning" id="topproductchart" style="display: none;">
+                      <h3 id="backtipro" class="text-center p-1 m-2 shadow bg-primary text-white rounded ">Back</h3>
+              <canvas class="m-1" id="myChartN" style="display: block; box-sizing: border-box; height: 634px; width: 634px;" width="634" height="634"></canvas>
+</div>
+            
+            <div class="text-center p-3 m-2 shadow bg-light text-white rounded text-warning " id="topproduct">
+              <h3 class="text-center p-1 m-1 shadow bg-4 text-white rounded ">
+
+              DRIED FRUIT JUICE
+              </h3>
+                <img class="m-3 p-1 col-sm-4" src="admin_data/jus-des-fruits-secs.webp" alt="Card image" width="200px">
+                  <h3 class="text-light  text-center  shadow-lg bg-primary p-2 m-1" style="font-weight:lighter; ">Total profit from this product <span class="text-danger " style="font-weight: bold ;">156687dh</span> in 348 unit </h3>
+              </div>
+          </div>
+        
+<script>
+    const dataN = {
+  labels: ["DRIED FRUIT JUICE","ORANGE JUICE","WATER","PANASHI","COCA COLA","CHEESE BURGER","CHICKEN BURGER","AVOCADO JUICE"],
+  datasets: [{
+    label: 'Products',
+    data: ([348,131,28,4,251,5,16,1]),
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(75, 192, 192)',
+      'rgb(255, 205, 86)',
+      'rgb(201, 203, 207)',
+      'rgb(54, 162, 235)'
+    ]
+  }]
+};
+
+const configN = {
+  type: 'polarArea',
+  data: dataN,
+  options: {}
+};
+
+const myChartN = new Chart(
+    document.getElementById('myChartN'),
+    configN
+  );
+</script>
+             
+          <div class="container-fluid m-0 p-0  col-sm-6  shadow-lg ">
+               <h3 class="text-light  text-center  shadow-lg bg-2 p-3 m-1 ">Profit by user</h3>
+              <canvas class="bg-light m-1" id="myChart1" style="display: block; box-sizing: border-box; height: 317px; width: 634px;" width="634" height="317"></canvas>
+          </div>
+      </div>
+    </div>
+
+    
+
+    <div id="Employes" class="container-fluid tab-pane fade"><br>
+      <h3 class="c-white text-center bg-warning shadow p-2 m-1 ">Employes</h3>
+             <div class="container-fluid d-flex flex-wrap justify-content-center">
+      
+                        
+                        <div class="card col-sm-3 m-1">
+                        <img class="card-img-top" src="admin_data/My%20Website.png" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">Ahmed   You</h4>
+                            <p class="card-text text-center ">Role : admin<br> Status :<span class="text-danger">Suspended</span><br><span>Total Earnings : 0.00 dh</span></p>
+                            <a href="https://os-centa.000webhostapp.com/job.php?id=2" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card col-sm-3 m-1">
+                        <img class="card-img-top" src="admin_data/My%20Website.png" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">admin admin</h4>
+                            <p class="card-text text-center ">Role : admin<br> Status :<span class="text-success">Active</span><br><span>Total Earnings : 60210.75 dh</span></p>
+                            <a href="https://os-centa.000webhostapp.com/job.php?id=4" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card col-sm-3 m-1">
+                        <img class="card-img-top" src="admin_data/My%20Website.png" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">YOUNES  AITOUAHDA</h4>
+                            <p class="card-text text-center ">Role : admin<br> Status :<span class="text-success">Active</span><br><span>Total Earnings : 51257.5 dh</span></p>
+                            <a href="https://os-centa.000webhostapp.com/job.php?id=5" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card col-sm-3 m-1">
+                        <img class="card-img-top" src="admin_data/My%20Website.png" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">abdssamad ait ouahda</h4>
+                            <p class="card-text text-center ">Role : admin<br> Status :<span class="text-success">Active</span><br><span>Total Earnings : 0.00 dh</span></p>
+                            <a href="https://os-centa.000webhostapp.com/job.php?id=6" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card col-sm-3 m-1">
+                        <img class="card-img-top" src="admin_data/My%20Website.png" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">user normal</h4>
+                            <p class="card-text text-center ">Role : admin<br> Status :<span class="text-success">Active</span><br><span>Total Earnings : 50503.75 dh</span></p>
+                            <a href="https://os-centa.000webhostapp.com/job.php?id=9" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>             </div>
+        
+      
+    </div>
+    <div id="Products" class="container_fluid tab-pane fade"><br>
+      <h3 class="c-white text-center  bg-danger shadow p-2 m-1 ">Products</h3>
+      <div class="m-1 bg-light d-flex justify-content-around p-2">
+          
+          <div class="col-6">
+             
+          <select class=" p-1 form-select" name="catselect" id="catselect">
+              <option value="" selected="selected">Select Product Category</option>
+              <option value="1">DRINKS</option><option value="2">BURGERS</option><option value="3">PIZZAS</option><option value="4">CALLZONE</option><option value="5">SHAWARMA</option><option value="6">TORTILLA</option>        </select> 
+        </div>
+              <button class="btn btn-success col-sm-3 m-1 p-1 " data-bs-toggle="modal" data-bs-target="#addCat">Add Category</button>
+              <button class="btn col-sm-2 btn-primary m-1 p-1 " data-bs-toggle="modal" data-bs-target="#addPro">Add Product</button>
+
+        
+      </div>
+      
+      <div class="container-fluid d-flex product flex-wrap justify-content-center">
+      
+                        <div class="card cart2 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/Chicken_Burger-scaled-e1624614963511.jpg" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">CHICKEN BURGER</h4>
+                            <p class="card-text text-center ">Category : BURGERS <br> 
+                            Price = 120.5dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=1" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart2 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/b651c473c595f728118644568221637e.jpg" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">CHEESE BURGER</h4>
+                            <p class="card-text text-center ">Category : BURGERS <br> 
+                            Price = 50.25dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=3" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/coca-cola-classic.webp" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">COCA COLA</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 4.5dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=2" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/glass-of-orange-juice-with-oranges-1589917191.jpg" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">ORANGE JUICE</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 13dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=4" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/10.webp" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">WATER</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 3.5dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=5" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/Jus-de-fruits.jpeg" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">PANASHI</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 19.5dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=6" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/EASY-Creamy-Avocado-Smoothie-Recipe-500x500.jpg" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">AVOCADO JUICE</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 150.25dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=10" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>
+                        <div class="card cart1 col-sm-3 m-1" style="display: none;">
+                        <img class="card-img-top" src="admin_data/jus-des-fruits-secs.webp" alt="Card image">
+                        <div class=" text-center card-body">
+                            <h4 class="card-title">DRIED FRUIT JUICE</h4>
+                            <p class="card-text text-center ">Category : DRINKS <br> 
+                            Price = 450.25dh
+                            </p>
+                            <a href="https://os-centa.000webhostapp.com/product.php?id=9" class="btn col-9 btn-primary">Edit</a>
+                        </div>
+                        </div>    </div>
+  </div>
+  
+  <div id="Operations" class="container_fluid tab-pane fade"><br>
+      <h3 class="c-white text-center bg-primary shadow p-2 m-1 ">History of Operations</h3>
+                 <div class="text-light  text-center  shadow-lg bg-light  p-2 m-1">
+                 <div id="table_id_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="table_id_length"><label>Show <select name="table_id_length" aria-controls="table_id" class=""><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="table_id_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="table_id"></label></div><table id="table_id" class="display text-center table dataTable no-footer" aria-describedby="table_id_info"> 
+                 <thead>
+                    <tr class="text-center"><th class="sorting sorting_asc" tabindex="0" aria-controls="table_id" rowspan="1" colspan="1" style="width: 0px;" aria-sort="ascending" aria-label="ID: activate to sort column descending">ID</th><th class="sorting" tabindex="0" aria-controls="table_id" rowspan="1" colspan="1" style="width: 0px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="table_id" rowspan="1" colspan="1" style="width: 0px;" aria-label="Total: activate to sort column ascending">Total</th><th class="sorting" tabindex="0" aria-controls="table_id" rowspan="1" colspan="1" style="width: 0px;" aria-label="Done by: activate to sort column ascending">Done by</th><th class="sorting" tabindex="0" aria-controls="table_id" rowspan="1" colspan="1" style="width: 0px;" aria-label="Receipt: activate to sort column ascending">Receipt</th></tr>
+                </thead>
+                    <tbody>
+                                        <tr class="odd"><td class="sorting_1">1660757102</td><td>2022-08-17 17:25:02</td><td>13 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757102">print</a>
+                      
+                      </td></tr><tr class="even"><td class="sorting_1">1660757210</td><td>2022-08-17 17:26:51</td><td>3201.25 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757210">print</a>
+                      
+                      </td></tr><tr class="odd"><td class="sorting_1">1660757303</td><td>2022-08-17 17:28:24</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757303">print</a>
+                      
+                      </td></tr><tr class="even"><td class="sorting_1">1660757366</td><td>2022-08-17 17:29:26</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757366">print</a>
+                      
+                      </td></tr><tr class="odd"><td class="sorting_1">1660757391</td><td>2022-08-17 17:29:51</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757391">print</a>
+                      
+                      </td></tr><tr class="even"><td class="sorting_1">1660757484</td><td>2022-08-17 17:31:24</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757484">print</a>
+                      
+                      </td></tr><tr class="odd"><td class="sorting_1">1660757604</td><td>2022-08-17 17:33:24</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757604">print</a>
+                      
+                      </td></tr><tr class="even"><td class="sorting_1">1660757631</td><td>2022-08-17 17:33:51</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757631">print</a>
+                      
+                      </td></tr><tr class="odd"><td class="sorting_1">1660757683</td><td>2022-08-17 17:34:43</td><td>3602 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660757683">print</a>
+                      
+                      </td></tr><tr class="even"><td class="sorting_1">1660771993</td><td>2022-08-17 21:33:13</td><td>8121.5 dh</td><td>admin admin</td><td> <a href="https://os-centa.000webhostapp.com/fac.php?fac=1660771993">print</a>
+                      
+                      </td></tr></tbody>
+                  </table><div class="dataTables_info" id="table_id_info" role="status" aria-live="polite">Showing 1 to 10 of 42 entries</div><div class="dataTables_paginate paging_simple_numbers" id="table_id_paginate"><a class="paginate_button previous disabled" aria-controls="table_id" data-dt-idx="0" tabindex="-1" id="table_id_previous">Previous</a><span><a class="paginate_button current" aria-controls="table_id" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="table_id" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="table_id" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="table_id" data-dt-idx="4" tabindex="0">4</a><a class="paginate_button " aria-controls="table_id" data-dt-idx="5" tabindex="0">5</a></span><a class="paginate_button next" aria-controls="table_id" data-dt-idx="6" tabindex="0" id="table_id_next">Next</a></div></div>
+                  
+                 </div>
+                 
+       </div>
+</div>
+<!------------modal add cat----------->
+
+    <div class="modal" id="addCat">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add category</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <form action="add_category.php" method="post" enctype="multipart/form-data">
+
+          <div class="modal-body">
+          <label for="catname">Category name :</label>
+            <input class="form-control" type="text" id="catname" name="catname"><br>
+            
+            <label for="img">Select Category image:</label>
+            <input class="form-control" type="file" name="img" value="" accept="image/*">            
+            
+          </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+                      <input class=" btn btn-success" type="submit" value="Valide">
+
+        <button type="button" id="submit" class="btn  btn-danger" data-bs-dismiss="modal">Exit</button>
+      </div>
+     </form>
+
+    </div>
+  </div>
+</div>
+ <!------------modal add product----------->
+
+ <div class="modal" id="addPro">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add Product </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+    <form action="add_product.php" method="post" enctype="multipart/form-data">
+
+          <div class="modal-body">
+          <label for="proname">Product name :</label>
+            <input class="form-control" type="text" id="proname" name="proname"><br>
+            <label for="propri">Product price :</label>
+            <input class="form-control" type="text" id="propri" name="propri"><br>
+            
+            <label for="pimg">Select Product image:</label>
+            <input class="form-control" type="file" name="pimg" value="" accept="image/*">            
+            <label for="cat">Choose a category:</label>
+        <select class="form-control" name="cat" id="cat">
+              <option value="1" selected="selected">DRINKS</option><option value="2">BURGERS</option><option value="3">PIZZAS</option><option value="4">CALLZONE</option><option value="5">SHAWARMA</option><option value="6">TORTILLA</option>        </select> 
+            
+          </div>
+
+      </form></div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+                      <input class=" btn btn-success" type="submit" value="Valide">
+
+        <button type="button" id="psubmit" class="btn-danger btn" data-bs-dismiss="modal">Exit</button>
+      </div>
+           
+
+    </div>
+  </div>
+</div>
+
+<!-- getting data for char js -->
+     <script>
+    $('#topproductchart').hide();
+    $('#topproduct').click(function(e) {
+         e.preventDefault();
+
+        $(this).hide();
+        $('#topproductchart').show();
+    });
+    $('#backtipro').click(function(e) {
+         e.preventDefault();
+
+        $('#topproductchart').hide();
+        $('#topproduct').show();
+    });
+    
+    const labels1 = ["admin","YOUNES ","user"];
+
+const data1 = {
+  labels: labels1,
+  datasets: [{
+  label: 'Sales by User',
+  data:  ["60210.75","51257.5","50503.75"],
+  backgroundColor: [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(201, 203, 207, 0.2)'
+  ],
+  borderColor: [
+    'rgb(255, 99, 132)',
+    'rgb(255, 159, 64)',
+    'rgb(255, 205, 86)',
+    'rgb(75, 192, 192)',
+    'rgb(54, 162, 235)',
+    'rgb(153, 102, 255)',
+    'rgb(201, 203, 207)'
+  ],
+  borderWidth: 1
+},{
+  label: 'Operation by User',
+  data:  ["39","1","2"],
+  backgroundColor: [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(201, 203, 207, 0.2)'
+  ],
+  borderColor: [
+    'rgb(255, 99, 132)',
+    'rgb(255, 159, 64)',
+    'rgb(255, 205, 86)',
+    'rgb(75, 192, 192)',
+    'rgb(54, 162, 235)',
+    'rgb(153, 102, 255)',
+    'rgb(201, 203, 207)'
+  ],
+  borderWidth: 3
+}]
+};
+
+const config1 = {
+  type: 'bar',
+  data: data1,
+  options: {}
+};
+
+const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
+</script>
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+
+
+//CHART.JS
+const labels =  ["2022-08-17","2022-08-18","2022-08-19","2022-08-20","2022-08-21","2022-08-23","2022-08-24","2022-08-26","2022-11-07"];
+
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'Sales',
+    data: ["36549.75","8151.5","51257.5","7875.5","5872.5","539.75","1073.75","50606.75","45"],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+const config = {
+  type: 'line',
+  data: data,
+};
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+ $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+$('.product .card').hide();
+$('#catselect').on('change', function() {
+var cart ='cart'+$('#catselect').val();
+$('.product .card').hide();
+$("."+cart).show();
+});
+</script>
+<div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"><img src="admin_data/footer-powered-by-000webhost-white2.webp" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&0<notification.length&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim Deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$<span style='font-size: 80px;'>2.49</span>/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script>
+
+
+
+
+
+
+</div></body></html>

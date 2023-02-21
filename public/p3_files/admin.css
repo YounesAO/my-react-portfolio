@@ -1,0 +1,68 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+html,
+body {
+    margin: 0% !important;
+    padding: 0%!important;
+  min-height: 100vh!important;}
+body{
+    margin: 0% !important;
+    padding: 0%!important;
+    background-color: rgb(132, 67, 192) !important;
+    margin: 0;
+    width: 100%;
+    
+}
+.chart{
+    width: 95%;
+}
+.chart canvas {
+    width: 100%;
+}
+.navv{
+    display: flex!important;
+    padding-top: 0%!important;
+}
+.nav-item{
+    margin-right: 10px;
+}
+.c-white{ color: #fff!important;}
+.card-deck{ 
+    display: flex;
+    
+
+}
+.stiky{
+    position: sticky!important;
+}
+.card{
+margin-left: 15px !important;}
+.bg-y{
+    background-color:rgba(255, 205, 86, 0.8) ;
+}
+
+.bg-lime{background-color: #abd699;}
+
+.bg-lemon{background-color: #ffe26a;}
+
+.bg-t{background-color: #75c9b7;}
+
+.bg-mint{background-color: #c7ddcc;}
+
+.bg-navy{background-color: #16123f;}
+.bg-lavender{background-color:  #b999be ;}
+.bg-rose{background-color:  #ed0b70;}
+.card-img-top{
+    height:100%;
+    object-fit: cover;
+
+}
+
+.bg-1{background-color:#c14644;}
+.bg-2{background-color:#fab633;}
+.bg-3{background-color:#548dae;}
+.bg-4{background-color:#40436f;}
+.bg-5{background-color:#f5f4ac
+;}

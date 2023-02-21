@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil Espace Etudiant</title>
+    <link rel="shortcut icon" href="P2_files/logo1.png" type="image/x-icon">
+
+    <link href="P2_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="P2_files/homeStyle.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="P2_files/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="P2_files/all.min.css">
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link href="P2_files/v5-font-face.css" rel="stylesheet">
+    <!-- Loading the v6 core styles and the Solid and Brands styles -->
+    <link href="P2_files/fontawesome.css" rel="stylesheet">
+    <link href="P2_files/brands.css" rel="stylesheet">
+    <link href="P2_files/solid.css" rel="stylesheet">
+    <!-- script -->
+    <script type="module">
+    import {
+        afficher_les_informationes,afficher_mes_clubes
+    } from "./script/homeScript.js";
+    const data = {"0":"1","idEtudiant":"1","1":"YOUNES","nomEtudiant":"YOUNES","2":"AIT OUAHDA","prenomEtudiant":"AIT OUAHDA","3":"D1324","CNE":"D1324","4":"GI","filiere":"GI","5":"2","niveau":"2","6":"2023-01-03","dateNaissance":"2023-01-03","7":"12345678","password":"12345678","8":"63bb1eb8230585.91035021.png","img":"63bb1eb8230585.91035021.png","9":"YOUNESAIO","userName":"YOUNESAIO","10":"1","role":"1","11":"M","sexe":"M"};
+    const clubes = [{"idClub":"1","nomClub":"HIGH TECH DAKHLA","logo":"63bb1f08beec02.87440776.png","Slogan":"ADVECED INTERFACE FOR THE FURTUE"}];
+    afficher_les_informationes(data);
+    afficher_mes_clubes(clubes)
+    </script>
+    <script src="P2_files/homeScript.js" type="module" defer="defer"></script>
+</head>
+
+<body>
+    <aside class="bg-w txt-c pd-three txt-cap">
+        <p class="mb-40 prenom">AIT OUAHDA</p>
+        <ul>
+            <li>
+                <a data-bs-toggle="tab" href="#home"> <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a data-bs-toggle="tab" href="#clubs"><i class="fa-solid fa-users"></i>
+                    <span>Clubs</span>
+                </a>
+            </li>
+            <li>
+                <a data-bs-toggle="tab" href="#create"><i class="fa-solid fa-square-plus"></i>
+                    <span>Create</span></a>
+            </li>
+            <li>
+                <a data-bs-toggle="tab" href="#inbox">
+                    <i class="fa-solid fa-bullhorn"></i><span>Inbox</span>
+                </a>
+            </li>
+            
+                    <li>
+                        <a href="PP2.htm"><i class="fa-regular fa-chart-bar fa-fw"></i><span>control panel</span></a>
+                    </li>
+                                <li>
+                <a href="http://localhost/tp/Gestion-des-Club---ESTD/logout.php"><i class="fa-solid fa-door-closed"></i>Logout</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Tab panes -->
+    <main>
+        <!-- start nav bar -->
+        <header>
+            <nav id="navBar" class="d-flex justify-content-between align-items-center p-3 position-relative">
+            <img src="P2_files/logo1.png" alt="" srcset="" style="max-width:40px">
+                <div class="center">
+                    <span><i class="fa-regular fa-bell"></i></span>
+                    <img src="P2_files/63bb1eb8230585.91035021.png" alt="profile image" srcset="">
+                </div>
+            </nav>
+        </header>
+        <!-- end nav bar -->
+        <!-- start main content -->
+        <div class="tab-content content">
+            <div class="tab-pane active " id="home">
+                <h1 class="position-relative text-align-center">home</h1>
+                <!-- start bienvenue page -->
+                <div id="greeting" class="partOfContent">
+                    <header class="d-flex justify-content-between align-items-center" style="background:#eee;">
+                        <div style="align-self: flex-start;">
+                            <h2>Bienvenue</h2>
+                            <p class="nom_prenom">YOUNES AIT OUAHDA</p>
+                        </div>
+                        <img src="P2_files/welcome.png" alt="welcome">
+                    </header>
+                    <div>
+                        <img src="P2_files/63bb1eb8230585.91035021.png" alt="profile icon" srcset="">
+                        <div class="information-about-me">
+                            <div>
+                                <span class="nom">YOUNES</span>
+                                <p class="prenom">AIT OUAHDA</p>
+                            </div>
+                            <div>
+                                <span>Filière</span>
+                                <p class="filiere">GI</p>
+                            </div>
+                            <div>
+                                <span>Niveau</span>
+                                <p class="niveau">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <iframe></iframe>
+            </div>
+            <!-- end bienvenue page -->
+            <!-- start clubes page -->
+            <div class="tab-pane container fade" id="clubs">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>My Clubs</h1>
+                    <a class="btn m-3 align-self-center mr-2 btn-success" href="http://localhost/tp/Gestion-des-Club---ESTD/clubProfil.php">Intégrer <i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <div class="d-none event">
+                        <a href="http://localhost/tp/Gestion-des-Club---ESTD/EventForm.php?idClub=1" class="btn btn-primary">Proposer event</a>
+                    </div>
+                </div>
+                <div class="lesClubes">
+                <div class="club"><header><img src="P2_files/63bb1f08beec02.87440776.png"></header><div><h3>HIGH TECH DAKHLA</h3><p>ADVECED INTERFACE FOR THE FURTUE</p><div class="event"><a href="http://localhost/tp/Gestion-des-Club---ESTD/EventForm.php?idClub=1" class="btn btn-primary">propose event</a></div></div></div></div>
+            </div>
+            <!-- end clubes page -->
+            <!-- start create -->
+            <div class="tab-pane container fade" id="create">
+                <h1>Créer votre club</h1>
+                <p>la durée de la creation des nouveaux clubs,sera expiré le <span class="deadline">23/10</span></p>
+                <a class="btn btn-warning p-2 shadow " href="http://localhost/tp/Gestion-des-Club---ESTD/createClube.php">Start la procédure</a>
+            </div>
+            <!-- start create -->
+            <!-- start inbox -->
+            <div class="tab-pane container fade" id="inbox">
+                <h1>Announces</h1>
+                <div>
+                 <div class="bg-light p-3 m-1 shadow"> <h6>EVENMENT 1</h6><p> Organise un evenement sous le thème de :LA DESCRIPTION DE event</p></div>                </div>
+            </div>
+            <!-- start inbox -->
+        </div>
+        <!-- end main content -->
+    </main>
+
+
+</body></html>

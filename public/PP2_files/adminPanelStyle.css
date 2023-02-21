@@ -1,0 +1,211 @@
+
+  /* body{
+    background-color:#606E82;
+} 
+nav {
+position: fixed;
+left: 0;
+top: 0;
+width: 120px!important;
+height: 100%;
+background-color:#204473;
+}
+ul{
+display :flex ;
+flex-direction: column;
+text-decoration: none;
+padding: 5px;
+
+}
+li{
+display:flex;
+flex-direction: column;
+justify-content :center;
+align-items:center;
+margin-top: 10px;
+font-size: large;
+}
+.home{
+
+display: flex;
+flex-direction: column;
+}
+li img{
+width : 40px;
+-webkit-filter: grayscale(100%); black qnd zhit filter */
+/* filter: grayscale(100%) invert(); */
+
+/* } */
+/* li a{
+color:rgba(252, 252, 252, 0.7);
+text-decoration:none;
+font-size : large;
+}
+
+.requests{
+  display: flex;
+}
+.requests .card{
+  margin: 10px;
+}
+.home .nbMember{
+  padding:30PX 50PX 30PX 50PX;
+  border-radius: 5px;
+  font-size: X-large;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(228, 208, 32);
+  width: 300px;
+  height: 150px;
+ 
+}
+.widgets{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+    text-align: center;
+    font-family: 'Homenaje';
+    font-style: normal;  
+}
+.nbMember:hover{
+
+transition: 300ms;
+  transform:scale(1.1);
+}
+.nextEvent {
+  width: 300px;
+flex-direction: column-reverse;
+justify-content: center;
+  color: white;
+  background-color: rgb(167, 20, 167)!important;
+}
+.nbMember span{
+  font-family: 'Homenaje';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 105px;
+  text-align: center;
+  
+  
+}
+.nbMember{
+  display: flex;
+}
+.dat{
+  font-size: 46px!important;
+
+}
+.nextEventText{
+  font-size: x-small;
+}
+.home div button {
+color :white;
+}
+.logout{
+margin-top: 30vh;
+color :red;
+border :1px solid red ;
+padding :3px;
+border-radius:5px
+}
+.logout:hover{
+transition :500ms;
+background-color :red;
+color :#D2D2D2;
+}
+.nav-link{
+width:100%;
+text-align:center;
+}
+.tab-pane {
+margin-left: 150px;
+margin-top: 10px;
+}
+.tab-pane h3{
+color : white;
+}
+.card{
+  width: 250PX;
+}
+.card-body div {
+  display: flex;
+  justify-content: space-between;}
+
+
+.card-body div  .btn{
+  padding: 3px;
+  width: 100px;
+  font-size: small;
+}
+.bg-pri{
+  color: aliceblue;
+  font-weight: 700 ;
+  background: rgb(65, 132, 177);
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  nav{
+    position: absolute;
+    top: 0;
+    width: 100%!important;
+    height: 50px;
+  }
+  .nav{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-content{
+    margin-top: 100px;
+  }
+  ul{
+
+    display :flex ;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px;
+    
+    }
+    li{
+    display:flex;
+    flex-direction: row;
+    justify-content :center;
+    align-items:center;
+    margin-top: 0;
+    height: 100%;
+    margin-left: 10px;
+    font-size: large;
+    }
+    .logout{
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-link {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%-50px;
+    }
+} */
+@media (max-width: 767px) {
+  aside {
+    width: 58px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+aside a {
+  color: black;
+}

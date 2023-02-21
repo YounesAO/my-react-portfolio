@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace de Service Parascolaire</title>
+    <link rel="shortcut icon" href="/images/logo1.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="P22_files/homeStyle.css">
+    <link href="P22_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="P22_files/Service.css">
+    <!-- Loading the v6 core styles and the Solid and Brands styles -->
+    <link href="P22_files/fontawesome.css" rel="stylesheet">
+    <link href="P22_files/brands.css" rel="stylesheet">
+    <link href="P22_files/solid.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="P22_files/css2.css" rel="stylesheet">
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+
+    <link href="P22_files/v5-font-face.css" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+    </style>
+    <script src="P22_files/homeScript.js" defer="defer" type="module"></script>
+</head>
+
+<body>
+        <aside class="bg-w txt-c pd-three txt-cap">
+            <a href="P2.htm"></a><img src="P22_files/logo.png" alt="" srcset=""> </a>
+            <ul>
+                <li>
+                    <a data-bs-toggle="tab" href="#Dashboard"> <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-bs-toggle="tab" href="#request"><i class="fa-solid fa-users"></i>
+                        <span>request</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-bs-toggle="tab" href="#events"><i class="fa-solid fa-square-plus"></i>
+                        <span>events</span></a>
+                </li>
+            </ul>
+        </aside>
+
+    <!-- Tab panes -->
+    <main>
+        <div class="tab-content">
+            <div class="tab-pane content first home active" id="dashboard">
+                <h1>dashboard</h1>
+                <div class="d-flex widgets ">
+                    <div class="stat-widget shadow">
+                        <span class="stat-num">9 </span>
+                        <span class="stat-text"> Club</span>
+                    </div>
+                    <div class="stat-widget shadow">
+                        <span class="stat-num"> 120 </span>
+                        <span class="stat-text"><i class="fa fa-user" aria-hidden="true"></i>Etudiants</span>
+                    </div>
+                    <div class="stat-widget shadow">
+                        <span class="stat-num date">20-09-2023 </span>
+                        <span class="stat-text"><i class="fa fa-calendar" aria-hidden="true"></i> next event </span>
+                    </div>
+                    <div class="stat-widget shadow" id="chartClub">
+                        <canvas id="myChart" style="display: block; box-sizing: border-box; height: 260px; width: 520px;" width="520" height="260"></canvas>
+                    </div>
+                    <div class="stat-widget shadow" id="chartmem">
+                        <canvas id="myChart1" style="display: block; box-sizing: border-box; height: 200px; width: 200px;" width="200" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane content fade" id="request">
+                <h1>requests</h1>
+                <div class="requests">
+                  0 Requests                </div>
+            </div>
+            <div class="tab-pane content fade" id="events">
+                <h1>events</h1>
+                <div class="requests">
+                  no result                </div>
+            </div>
+                
+         </div>
+    </main>
+
+    <script src="P22_files/chart.js"></script>
+
+    <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['HIGH TECH', 'ESTD MEDIA', 'GEN Z', 'United student'],
+            datasets: [{
+                label: 'Membres par clubs',
+                data: [12, 19, 3, 5],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    const ctx1 = document.getElementById('myChart1');
+
+    data1 = {
+        datasets: [{
+            data: [10, 30]
+        }],
+
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: [
+            'Female',
+            'Male'
+        ]
+    };
+
+
+    const config1 = {
+        type: 'doughnut',
+        data: data1,
+    };
+    new Chart(ctx1, config1);
+    </script>
+
+
+
+
+</body></html>

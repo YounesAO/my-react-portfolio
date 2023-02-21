@@ -5,13 +5,14 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects/index';
+import Display from './components/Display';
 
 function App() {
   return (
     <>
     <Routes>
       <Route path='/' element ={<Layout/>}>
-
+    
         <Route index element={<Home />}/>
         <Route path='about' element ={<About/>}/>
         <Route path='projects' element ={<Projects/>}/>
@@ -19,6 +20,9 @@ function App() {
         <Route path='contact' element ={<Contact/>}/>
       
       </Route>
+      <Route path='Display' element ={<Display/>}/>
+
+
 
     </Routes>
     </>
