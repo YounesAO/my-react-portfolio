@@ -2,8 +2,7 @@ import'./index.scss';
 import logoTitle from'../../../assets/images/logo-yo.png'
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import gsap from 'gsap-trial';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+
 import { useState } from 'react';
 const Logo = () => {
 

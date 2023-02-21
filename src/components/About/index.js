@@ -1,4 +1,3 @@
-import AnimatesLetters from '../AnimatedLetters';
 import './index.scss';
 import { useEffect, useState } from 'react'
 import {
@@ -25,7 +24,7 @@ return (
     <div className='container about-page'>
         <div className='text-zone'>
             <h1>
-            <AnimatesLetters
+            <AnimatedLetters
             letterClass={letterClass}
             strArray={['A','B','O','U','T']}
            idx={15}

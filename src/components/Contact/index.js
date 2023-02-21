@@ -1,13 +1,11 @@
 
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faContactCard } from '@fortawesome/free-solid-svg-icons'
+import {  faContactCard } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -24,7 +22,6 @@ const Contact = ()=>{
         setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
-const position = [51.505, -0.09]
   const sendEmail=()=> {
     console.log("mailto:Younes.AitOuahda@gmail.com"+Text.current.value )
     window.location.href = "mailto:Younes.AitOuahda@gmail.com?subject="+objet.current.value+"&body="+Text.current.value;

@@ -13,7 +13,7 @@ const Projects =()=>{
   <div class="screen" >
       <ul className='ul'>
         <li>
-          <a href="my-r-portfolio\src\assets\htmls\Dashbord - OS-Centa.htm" class="icon">
+          <a href="#" class="icon">
             <FontAwesomeIcon className='img' icon={faEdge} color='#0023ff' />
           <span class="label">Project 1</span>
           </a>
