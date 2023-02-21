@@ -1,0 +1,390 @@
+.computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .screen {
+    background-color:#96bbbf;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .screen h1 {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .keyboard {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+    padding: 20px;
+
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .key {
+    background-color: #fff;
+    border: 1px solid#ccc;;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  /*
+  .mouse {
+    width: 40px;
+    height: 60px;
+    background-color:#ccc;;
+    margin-top: 20px;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    bottom: -10px;
+    left: 230px;
+  }
+  
+  
+  .mouse::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+  
+  .mouse::after {
+      content: '';
+  display: block;
+  width: 20px;
+  height: 5px;
+  background-color:#ccc;;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}*/
+$font-size: 16px;
+$key-height: 50px;
+$key-width: 50px;
+$key-margin: 5px;
+$shift-key-width: 80px;
+$enter-key-width: 70px;
+$backspace-key-width: 100px;
+$space-key-width: 360px;
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  bottom: -251px;
+  left: 170px;
+  scale: 0.5;
+  margin-top: 0px;
+  top: -80px;left: -60px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $key-margin;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $key-height;
+  width: $key-width;
+  margin-right: $key-margin;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: $font-size;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  &.letter {
+    width: $key-width;
+  }
+
+  &.shift {
+    width: $shift-key-width;
+  }
+
+  &.enter {
+    width: $enter-key-width;
+  }
+
+  &.backspace {
+    width: $backspace-key-width;
+  }
+
+  &.space {
+    width: $space-key-width;
+ 
+}} 
+$screen-width: 800px;
+$screen-height: 600px;
+$screen-frame-width: 20px;
+
+.screen {
+  width: $screen-width;
+  height: $screen-height;
+  background-color:#96bbbf;
+  position: relative;
+  border: $screen-frame-width solid#ccc;;
+  border-radius: 10px;
+  overflow: hidden; /* hide anything that spills outside of the screen */
+}
+
+.desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+.taskbar {
+  height: 60px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.start-button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+}
+$monitor-width: 600px;
+$monitor-height: 400px;
+$monitor-screen-ratio: 16/9;
+$monitor-base-height: 50px;
+$monitor-stand-height: 40px;
+$monitor-foot-height: 10px;
+$monitor-color:#ccc;;
+$screen-color: #000;
+
+.monitor {
+  width: $monitor-width;
+  height: $monitor-height;
+  background-color: $monitor-color;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen {
+  width: $monitor-height * $monitor-screen-ratio;
+  height: $monitor-height;
+  background-color: #96bbbf;
+  border-radius: 10px;
+  position: absolute;
+  left: ($monitor-width - $monitor-height * $monitor-screen-ratio) / 2;
+  top: 0;
+}
+
+.base {
+  width: $monitor-width;
+  height: $monitor-base-height;
+  background-color: $monitor-color;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stand {
+ 
+  width: 20%;
+  height: $monitor-stand-height;
+  background-color: $monitor-color;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  top: -($monitor-stand-height / 2);
+  &::after{
+    content: "SNY";
+    font-family: 'Helvetica Neue';
+    font-size: 18px;
+    color: #00aeff;
+    margin-left: 40px;
+  }
+}
+
+.foot {
+  width: 100%;
+  height: $monitor-foot-height;
+  background-color: #837fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.key {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: rotateY(10deg);
+  }
+}
+.mouse {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 50px;
+  background-color: #ddd;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  bottom: -50px;
+  left: 230px;
+  top: -300px;
+
+
+}
+
+.scroll-wheel {
+  position: absolute;
+  top: 5px;
+  left: 13px;
+  width: 4px;
+  height: 8px;
+  background-color: #aaa;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.left-button {
+  position: absolute;
+  top: 18px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #aaa;
+  border: 1px solid #888;
+  border-radius: 50%;
+}
+
+.right-button {
+  position: absolute;
+  top: 18px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: #aaa;
+  border: 1px solid #888;
+  border-radius: 50%;
+}
+.icon {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  width: 100px;
+}
+
+.icon .img {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
+
+.icon .label {
+  display: block;
+  margin-top: 5px;
+}
+.ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
