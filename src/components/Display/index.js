@@ -32,7 +32,7 @@ useEffect(() => {
               />
             </h1>
             </div>
-        <iframe className='display-frame' src ={param1} width="100%" height="500"></iframe>
+        <iframe className='display-frame' src ="" width="100%" height="500"></iframe>
         <a className='btn-go-back' href='/projects'>
         <FontAwesomeIcon className='img' icon={faCode} color='#ffee00be' />
 
