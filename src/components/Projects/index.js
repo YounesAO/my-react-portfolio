@@ -2,6 +2,7 @@ import { faEdge ,faFirefoxBrowser  } from '@fortawesome/free-brands-svg-icons'
 import { faFileCode } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 const Projects =()=>{
@@ -28,27 +29,30 @@ const Projects =()=>{
   <div class="screen" >
       <ul className='ul'>
         <li>
-          <a href="/Display?param1=p1.htm" class="icon">
+          <Link className='icon' to ='/Display?param1=p2.htm'>
             <FontAwesomeIcon className='img' icon={faEdge} color='#0023ff' />
           <span class="label">Project 1 </span>
-          </a>
+          </Link>
         </li>
         <li>
-        <a href="/Display?param1=p2.htm" class="icon">
+        
+        
+        <Link className='icon' to ='/Display'>
+
             <FontAwesomeIcon className='img' icon={faFileCode} color='#331E54' />
           <span class="label">Project 2</span>
-          </a>        </li>
+         </Link>        </li>
         <li>
-        <a href="/Display?param1=p22.htm"  class="icon">
+        <Link className='icon' to ='/Display?param1=p22.htm'>
             <FontAwesomeIcon className='img' icon={faFirefoxBrowser} color='#FF9500' />
           <span class="label">Project 2-2</span>
-          </a>        
+         </Link>        
         </li>
         <li>
-        <a href="/Display?param1=p3.htm"  class="icon">
+        <Link className='icon' to ='/Display?param1=p3.htm'>
             <FontAwesomeIcon className='img' icon={faFirefoxBrowser} color='#FF9500' />
           <span class="label">Project 1-1</span>
-          </a>        
+          </Link>         
           </li>
       </ul>
   </div>
