@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Loader from 'react-loaders'
+import { Link } from 'react-router-dom'
 import AnimatesLetters from '../AnimatedLetters'
 import Projects from '../Projects'
 import './index.scss'
@@ -33,11 +34,11 @@ useEffect(() => {
             </h1>
             </div>
         <iframe className='display-frame' src ={'/'+param1} width="100%" height="500"></iframe>
-        <a className='btn-go-back' href='/projects'>
+        <Link className='btn-go-back' to={"/projects"}>
         <FontAwesomeIcon className='img' icon={faCode} color='#ffee00be' />
 
               <span>Go back to projects</span>
-              </a>
+              </Link>
         </div>
         <Loader type='ball-pulse'/>
 
