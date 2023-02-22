@@ -1,3 +1,4 @@
+
 .computer {
     display: flex;
     flex-direction: column;
@@ -408,4 +409,34 @@ max-width: 280px;
 }
 .Q{
   background-color: #f3fbff4f;
+}
+.exeplen .text-zone h6{
+  &::before{
+content: "alert('";
+font-size: 16px;
+font-family: 'sans-serif';
+color: #07ad2b;
+
+}
+margin-top: 18px;
+font-family: 'sans-serif';
+
+&::after{
+  content: "');";
+  font-size: 16px;
+  font-family: 'sans-serif';
+
+  color: #07ad2b;
+  
+  }}
+  @media screen and (max-width: 600px) {
+
+.computer {
+  scale: 0.5!important;
+  margin-top: 240px;
+
+}
+.cont {
+  display: contents;
+} 
 }

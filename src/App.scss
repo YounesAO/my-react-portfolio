@@ -41,3 +41,8 @@ input, textarea{
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+@media screen and (max-width: 600px) {
+h1{
+  font-size: 29px !important;
+}
+}

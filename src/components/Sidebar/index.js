@@ -39,13 +39,13 @@ const Sidebar = () =>(
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href="https://www.linkedin.com/in/younes-ait-ouahda-72987b202" >
+                <a target="_blank" rel='noreferrer' href="https://github.com/YounesAO" >
                     <FontAwesomeIcon icon={faGithub} color="#4D4D4E"/>
 
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href="https://www.linkedin.com/in/younes-ait-ouahda-72987b202" >
+                <a target="_blank" rel='noreferrer' href="https://younes-ait-ouahda.netlify.app" >
                     <FontAwesomeIcon icon={faUser} color="#4D4D4E"/>
 
                 </a>

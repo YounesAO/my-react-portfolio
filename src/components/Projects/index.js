@@ -9,9 +9,10 @@ const Projects =()=>{
  
     return (
       <>
-<div className='container'>
+<div className='container cont'>
       <div className='exeplen yel'>
           <p className='text-zone '>
+            <h6>Click on the project to open the simulation</h6>
             <h3>
               1-Web App for POS "point of sale"
             </h3>

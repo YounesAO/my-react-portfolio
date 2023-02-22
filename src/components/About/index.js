@@ -9,6 +9,7 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
+import { faDatabase} from '@fortawesome/free-solid-svg-icons'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
@@ -26,15 +27,13 @@ return (
             <h1>
             <AnimatedLetters
             letterClass={letterClass}
-            strArray={['A','B','O','U','T']}
+            strArray={['A','B','O','U','T',' ','M','E']}
            idx={15}
            />
             </h1>
             <p>
-                Formation
-                Diplôme universitaire de technologie DUT en Génie  Informatique en cours
-                Ecole Supérieure de Technologies EST, Dakhla.
-                Pertinents cours : Programmation orientée objet, Base de données, Architecture des ordinateurs, Réseaux informatiques
+            student 
+                  in Computer Science Diploma of University Technology (DUT) at the Higher School of Technologies (EST) in Dakhla , a relevant training program for acquiring skills in the field of computer science. The courses such as object-oriented programming, databases, computer architecture, and computer networks are essential skills to work in the field of computer science.
 
             </p>
  
@@ -46,9 +45,11 @@ return (
               <FontAwesomeIcon  icon={faPhp} color="#8993be" />
             </div>
             <div className="face2">
-              <FontAwesomeIcon  icon={faHtml5} color="#F06529" />
+              <FontAwesomeIcon  icon={faDatabase} className='rotateSvg' color="#D3D3D3" />
             </div>
             <div className="face3">
+            <FontAwesomeIcon  icon={faHtml5} color="#F06529" />
+
               <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
             </div>
             <div className="face4">

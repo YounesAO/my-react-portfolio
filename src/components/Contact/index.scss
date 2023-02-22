@@ -177,3 +177,17 @@
 }
 }
   }
+  @media screen and (max-width: 600px) {
+  .logo-contact svg {
+    right: 0%;
+    top: -4%;
+  }
+  .text-zone{
+    width: 90%!important;
+  }
+  form ul{
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+  }
+  }

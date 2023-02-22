@@ -9,7 +9,7 @@ const Home = () => {
     
     const [letterClass ,settLetterClass]=useState('text-animate');
     const nameArray = ['O','U','N','E','S'];
-    const jobArray = ['F','U','L','L',' ','S','T','A','C','K',' ','D','E','V'];
+    const jobArray = ['C','S',' ','S','T','U','D','E','N','T',' ','D','E','V'];
     
     useEffect(() => {
         setTimeout(() => 
@@ -38,7 +38,7 @@ const Home = () => {
             strArray = {jobArray}
             idx={20}/>
             </h1>
-            <h2> Frontend Devlopper /JAVA/SQL/SELEF-Polisher</h2>
+            <h2> FullStack Devlopper PHP/JAVA/SQL/SELEF-Publisher</h2>
             <Link to="/contact" className='flat-button'>Contact me</Link>
         </div>
         <Logo/>

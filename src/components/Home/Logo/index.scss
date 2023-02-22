@@ -46,3 +46,21 @@ svg {
 
   @keyframes blinker3 { to { opacity: 0; } }
   @keyframes blinker2 { to { filter: contrast(0);  } }
+  @media screen and (max-width: 600px) {
+
+  .logo-container svg {
+    width: 45%;
+    height: auto;
+    bottom: 0;
+    transform: rotateZ(30deg) !important;
+    right: 0;
+    position: absolute;
+  }
+  .logo-container  .solid-logo{
+    bottom: 0%;
+    right: 0;
+    width: 45%;
+    left: auto;
+    right: 0;
+  }
+}

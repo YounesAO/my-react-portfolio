@@ -89,3 +89,11 @@
     }
     
   }
+  .rotateSvg{
+    transform: rotate(-90deg);
+  }
+  .face3 {
+    display: grid;
+        svg{
+    transform: rotate(90deg);
+  }}
