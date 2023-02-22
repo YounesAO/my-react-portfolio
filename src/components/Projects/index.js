@@ -3,7 +3,6 @@ import { faFileCode } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import './index.scss'
-var destinition = "p1.htm"
 
 const Projects =()=>{
  
@@ -29,24 +28,24 @@ const Projects =()=>{
   <div class="screen" >
       <ul className='ul'>
         <li>
-          <a href="/Display?param1=/p1.htm" class="icon">
+          <a href="/Display?param1=p1.htm" class="icon">
             <FontAwesomeIcon className='img' icon={faEdge} color='#0023ff' />
           <span class="label">Project 1 </span>
           </a>
         </li>
         <li>
-        <a href="/Display?param1=/p2.htm" class="icon">
+        <a href="/Display?param1=p2.htm" class="icon">
             <FontAwesomeIcon className='img' icon={faFileCode} color='#331E54' />
           <span class="label">Project 2</span>
           </a>        </li>
         <li>
-        <a href="/Display?param1=/p22.htm"  class="icon">
+        <a href="/Display?param1=p22.htm"  class="icon">
             <FontAwesomeIcon className='img' icon={faFirefoxBrowser} color='#FF9500' />
           <span class="label">Project 2-2</span>
           </a>        
         </li>
         <li>
-        <a href="/Display?param1=/p3.htm"  class="icon">
+        <a href="/Display?param1=p3.htm"  class="icon">
             <FontAwesomeIcon className='img' icon={faFirefoxBrowser} color='#FF9500' />
           <span class="label">Project 1-1</span>
           </a>        
