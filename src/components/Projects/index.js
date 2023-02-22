@@ -1,5 +1,5 @@
 import { faEdge ,faFirefoxBrowser  } from '@fortawesome/free-brands-svg-icons'
-import { faFileCode } from '@fortawesome/free-solid-svg-icons'
+import { faFileCode,faDashboard } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
 import { Link } from 'react-router-dom'
@@ -37,7 +37,7 @@ const Projects =()=>{
         <li>
         
         
-        <Link className='icon' to ='/Display'>
+        <Link className='icon' to ='/Display?param1=p1.htm'>
 
             <FontAwesomeIcon className='img' icon={faFileCode} color='#331E54' />
           <span class="label">Project 2</span>
@@ -50,7 +50,7 @@ const Projects =()=>{
         </li>
         <li>
         <Link className='icon' to ='/Display?param1=p3.htm'>
-            <FontAwesomeIcon className='img' icon={faFirefoxBrowser} color='#FF9500' />
+            <FontAwesomeIcon className='img' icon={faDashboard} color='#1cff04' />
           <span class="label">Project 1-1</span>
           </Link>         
           </li>
@@ -64,7 +64,7 @@ const Projects =()=>{
 
   <div class="keyboard">
   <div class="row">
-    <a href='/' class="key letter">Q</a>
+    <a href='/' class="key letter Q">Q</a>
     <div class="key letter">W</div>
     <div class="key letter">E</div>
     <div class="key letter">R</div>
