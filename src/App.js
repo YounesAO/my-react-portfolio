@@ -20,7 +20,8 @@ function App() {
         <Route path='contact' element ={<Contact/>}/>
       
       </Route>
-      <Route path='Display' element ={<Display/>}/>
+      <Route path='Display' element ={<Display/>}>
+        </Route>
 
 
 
