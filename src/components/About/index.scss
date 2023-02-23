@@ -97,3 +97,11 @@
         svg{
     transform: rotate(90deg);
   }}
+  @media screen and (max-width: 600px) {
+    .logo-contact svg {
+      width: 50px!important;
+      right :20%!important;
+      top:-44%!important;
+
+    }
+  }

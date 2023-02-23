@@ -429,7 +429,7 @@ font-family: 'sans-serif';
   color: #07ad2b;
   
   }}
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1186px) {
 
 .computer {
   scale: 0.5!important;
@@ -439,4 +439,16 @@ font-family: 'sans-serif';
 .cont {
   display: contents;
 } 
+
 }
+@media screen and (max-width:1360px) and (min-width :601px){
+
+  .computer {
+    scale: 0.7!important;
+   
+  
+  }
+  .cont {
+    display: contents;
+  } 
+  }
