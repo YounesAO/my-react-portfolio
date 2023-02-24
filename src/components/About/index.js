@@ -7,12 +7,15 @@ import {
   faHtml5,
   faJava,
   faReact,
+  
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
-import { faDatabase} from '@fortawesome/free-solid-svg-icons'
+import { faDatabase,faDownload} from '@fortawesome/free-solid-svg-icons'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
+import { Link } from 'react-router-dom';
+import CV from '../CV';
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     useEffect(()=>{
@@ -38,7 +41,7 @@ return (
             </p>
  
         </div>
-
+       <CV/>
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
