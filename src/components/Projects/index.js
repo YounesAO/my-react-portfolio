@@ -30,7 +30,7 @@ const Projects =()=>{
   <div class="screen" >
       <ul className='ul'>
         <li>
-          <Link className='icon' to ='/Display?param1=p2.htm'>
+          <Link className='icon' to ='/Display?param1=p1.htm'>
             <FontAwesomeIcon className='img' icon={faEdge} color='#0023ff' />
           <span class="label">Project 1 </span>
           </Link>
@@ -38,7 +38,7 @@ const Projects =()=>{
         <li>
         
         
-        <Link className='icon' to ='/Display?param1=p1.htm'>
+        <Link className='icon' to ='/Display?param1=p2.htm'>
 
             <FontAwesomeIcon className='img' icon={faFileCode} color='#331E54' />
           <span class="label">Project 2</span>

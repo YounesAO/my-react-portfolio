@@ -432,9 +432,22 @@ font-family: 'sans-serif';
   @media screen and (max-width: 1186px) {
 
 .computer {
-  scale: 0.5!important;
+  position: relative;
+  scale: 0.3!important;
   margin-top: 240px;
+  bottom: 130px;
 
+
+}
+p{
+  scale: 0.7!important;
+h3{
+  margin: auto!important;
+}
+}
+.exeplen{
+  top: 40px;
+  left: 67px;
 }
 .cont {
   display: contents;
@@ -444,7 +457,7 @@ font-family: 'sans-serif';
 @media screen and (max-width:1360px) and (min-width :601px){
 
   .computer {
-    scale: 0.7!important;
+    scale: 0.4!important;
    
   
   }

@@ -98,6 +98,11 @@
     transform: rotate(90deg);
   }}
   @media screen and (max-width: 600px) {
+    .stage-cube-cont{
+      width: 100%;
+      padding-top: 67%;
+      opacity: 0.3;
+    }
     .logo-contact svg {
       width: 50px!important;
       right :20%!important;
