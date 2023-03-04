@@ -102,7 +102,7 @@ $space-key-width: 360px;
   position: relative;
   bottom: -251px;
   left: 170px;
-  scale: 0.5;
+  transform:scale(0.5);
   margin-top: 0px;
   top: -80px;left: -60px;
 }
@@ -433,14 +433,14 @@ font-family: 'sans-serif';
 
 .computer {
   position: relative;
-  scale: 0.3!important;
+  transform:scale(0.3)!important;
   margin-top: 240px;
   bottom: 130px;
 
 
 }
 p{
-  scale: 0.7!important;
+  transform:scale(0.7)!important;
 h3{
   margin: auto!important;
 }
@@ -457,7 +457,7 @@ h3{
 @media screen and (max-width:1360px) and (min-width :601px){
 
   .computer {
-    scale: 0.4!important;
+    transform:scale( 0.4)!important;
    
   
   }

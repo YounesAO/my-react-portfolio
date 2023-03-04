@@ -132,7 +132,7 @@ nav{
     display: flex !important;
     flex-direction: column !important;
     height: 60px;
-    width: 100%;
+    width: auto;
     position: absolute;
     
     z-index: 3;
@@ -144,11 +144,15 @@ nav{
 }
 ul{
         display: flex!important;
-        left: 80%;
-        top: 23%;
+        flex-direction: column;
+        left: auto;
+        top:109%;
+        right:-43%;
+        bottom: auto;
         li{
             margin-left: 6px;
         }
+        width: auto;
 }
 nav{
     display: flex!important;
