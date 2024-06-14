@@ -10,11 +10,10 @@ import {
   
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
-import { faDatabase,faDownload} from '@fortawesome/free-solid-svg-icons'
+import { faDatabase} from '@fortawesome/free-solid-svg-icons'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
-import { Link } from 'react-router-dom';
 import CV from '../CV';
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -31,8 +30,8 @@ return (
             <AnimatedLetters
             letterClass={letterClass}
             strArray={['A','B','O','U','T',' ','M','E']}
-           idx={15}
-           />
+            idx={15}
+            />
             </h1>
             <p>
             student 
