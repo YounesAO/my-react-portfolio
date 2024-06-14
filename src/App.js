@@ -6,10 +6,11 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects/index';
 import Display from './components/Display';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   return (
     <>
+    <SpeedInsights/>
     <Routes>
       <Route path='/' element ={<Layout/>}>
     
