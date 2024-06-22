@@ -34,8 +34,9 @@ return (
             />
             </h1>
             <p>
-            student 
-                  in Computer Science Diploma of University Technology (DUT) at the Higher School of Technologies (EST) in Dakhla , a relevant training program for acquiring skills in the field of computer science. The courses such as object-oriented programming, databases, computer architecture, and computer networks are essential skills to work in the field of computer science.
+            Software engineering student at ENSA-J,</p><p>
+            Ex-Student 
+                  in Computer Science Diploma of University Technology (DUT) at the Higher School of Technologies (EST) in Dakhla </p><p>, a relevant training program for acquiring skills in the field of computer science. The courses such as object-oriented programming, databases, computer architecture, and computer networks are essential skills to work in the field of computer science.
 
             </p>
  

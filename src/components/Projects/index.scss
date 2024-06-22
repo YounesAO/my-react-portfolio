@@ -392,19 +392,53 @@ $screen-color: #000;
 }
 .exeplen{
 display: block;
-position: absolute;
-left: 100px;
-top: 100px;
+margin-left: 100px;
+margin-top: 100px;
 color: white;
 font-family:'Coolvetica' ;
 font-size: 18px;
-max-width: 280px;
+
 }
-.yel{
-  
-  h3 {
+ 
+  .title {
     
-    color: #fbff04;
+    color: #c6c935;
+  }
+  .project-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+  }
+.project{
+  .prodesc{
+    padding:20px;
+    border: #07ad2b 1px solid;
+    background-color: #00000061;
+    margin-top:1px;
+    margin-bottom: 0px;
+  }
+  .prodesc:hover{
+    transition: all ease-in-out 500ms;
+    scale:1.1;
+  }
+  .dt{
+    display: none;
+    margin-top: 0px;
+    padding: 10px;
+    font-size: 16px!important;
+  }
+  .dt:hover{
+    display: flex;
+  }
+  sup{
+    font-size: 13px !important;
+    color: rgb(165, 255, 95);
+    display: block;
+    margin-top: -20px;
+    background-color: #00000083;
+    text-align: center;
   }
 }
 .Q{
@@ -429,39 +463,22 @@ font-family: 'sans-serif';
   color: #07ad2b;
   
   }}
-  @media screen and (max-width: 1186px) {
-
-.computer {
-  position: relative;
-  transform:scale(0.3)!important;
-  margin-top: 240px;
-  bottom: 130px;
-
-
-}
-p{
-  transform:scale(0.7)!important;
-h3{
-  margin: auto!important;
-}
-}
-.exeplen{
-  top: 40px;
-  left: 67px;
-}
-.cont {
-  display: contents;
-} 
-
-}
-@media screen and (max-width:1360px) and (min-width :601px){
-
-  .computer {
-    transform:scale( 0.4)!important;
-   
-  
-  }
   .cont {
-    display: contents;
+    display: flex;
+    flex-direction: row;
+  
   } 
+  .computer{
+    scale: 0.6;
+  }
+  @media screen and (max-width: 1000px) {
+    .cont {
+      display: flex;
+      flex-direction: column;
+    
+    } 
+    .body{
+      overflow: scroll !important;
+
+    }
   }
