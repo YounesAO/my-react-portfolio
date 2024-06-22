@@ -7,8 +7,9 @@ import Contact from './components/Contact';
 import Projects from './components/Projects/index';
 import Display from './components/Display';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { useEffect } from 'react';
 function App() {
-  React.useEffect(() => {
+  useEffect(() => {
     var _mtm = window._mtm = window._mtm || [];
     _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
